@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {User} from './models/user';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'event';
+
+  user: User = {
+    name:'Milo',
+    age: 32,
+    favoriteColor:'red'
+    };
+  
+  myName:string = "";
+  displayEdit:boolean = true;
+
+  toggleEdit() : void {
+
+    if (this.displayEdit==true) {
+      this.displayEdit = false;
+    } else {
+      this.displayEdit = true;
+    }
+  }
+
 }
